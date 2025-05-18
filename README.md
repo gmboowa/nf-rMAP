@@ -134,6 +134,7 @@ Parameter	default	description
 
 # Output structure
 
+```bash
 results/
 ├── reports/               # Quality control reports
 ├── assembly/              # Draft genomes (FASTA)
@@ -142,7 +143,7 @@ results/
 ├── resistance_genes/      # AMR/Virulence factors
 ├── phylogeny/             # Newick trees & alignments
 └── multiqc_report.html    # Consolidated QC
-
+```
 
 
 # Contributing 
