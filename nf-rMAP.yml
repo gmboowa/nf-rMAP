@@ -1,0 +1,48 @@
+name: nf-rmap-env
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+dependencies:
+  # Core tools
+  - python=3.10
+  - perl=5.32
+  - nextflow=23.04.1
+  
+  # QC & Processing
+  - fastqc=0.12.1
+  - trimmomatic=0.39
+  - multiqc=1.13
+
+  # Assembly
+  - shovill=1.1.0
+  - megahit=1.2.9
+  - spades=3.15.5
+
+  # Annotation
+  - prokka=1.14.6
+  - samtools=1.16.1
+  - bcftools=1.16
+
+  # Variant Analysis
+  - freebayes=1.3.6
+  - vt=0.5772
+  - snpeff=5.1d
+
+  # AMR Detection
+  - abricate=1.0.1
+  - amrfinderplus=3.11.12
+  - mlst=2.23.0
+
+  # Mobile Elements
+  - deviate=1.0.2
+  - ismapper=2.0.1
+
+  # Phylogenomics
+  - iqtree=2.2.0
+  - mafft=7.505
+
+  # Visualization
+  - r-ggtree=3.6.2
+  - r-kableextra=1.3.4
+  - r-plotly=4.10.1
