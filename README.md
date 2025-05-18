@@ -121,6 +121,10 @@ nextflow run main.nf \
 
 Parameter	default	description
 
+---
+
+```bash
+
 --input	Required	Input FASTQ path/pattern
 --outdir	./results	Output directory
 --reference	None	Reference genome (.gbk/.fasta)
@@ -132,7 +136,9 @@ Parameter	default	description
 
 **View all parameters with** --help
 
+```
 # Output structure
+---
 
 ```bash
 results/
