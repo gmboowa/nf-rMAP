@@ -151,9 +151,9 @@ results/
 └── multiqc_report.html    # Consolidated QC
 ```
 
-# For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases:
+### For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases.
 
-## 1. Antimicrobial Resistance (AMR) Databases
+# 1. Antimicrobial Resistance (AMR) Databases
 
 | Database   | Purpose                                      | Download Command/URL                   |
 |------------|--------------------------------------------- |----------------------------------------|
@@ -164,7 +164,7 @@ results/
 | NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
 
 
-## 2. Virulence & Mobile Elements
+# 2. Virulence & Mobile Elements
 
 | Database        | Purpose               | Download Command/URL                      |
 |-----------------|-----------------------|-------------------------------------------|
@@ -173,14 +173,14 @@ results/
 | ISfinder        | Insertion Sequences   | `ISfinder` *(manual download required)*   |
 
 
-## 3. Taxonomic Classification
+# 3. Taxonomic Classification
 
 | Database  | Purpose               | Installation Command                                          |
 |-----------|-----------------------|---------------------------------------------------------------|
 | GTDB-Tk   | Genome Taxonomy       | `gtdbtk download --data_dir /databases/gtdbtk`                |
 | Kraken2   | Standard Kraken2 DB   | `kraken2-build --standard --db /databases/kraken2` 'bacterial'|
 
-## 4. Annotation Databases
+# 4. Annotation Databases
 
 | Database | Purpose                 | Command                                                              |
 |----------|-------------------------|----------------------------------------------------------------------|
