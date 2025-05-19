@@ -1,6 +1,6 @@
 # nf-rMAP
 
-nf-rMAP: Nextflow-powered microbial genomics pipeline for rapid antimicrobial resistance analysis. Implements rMAP's core functionality with cloud-native scalability, enhanced QC, & modular workflows. Processes Illumina data through assembly, annotation, AMR detection & phylogenetics. 
+**nf-rMAP**: Nextflow-powered microbial genomics pipeline for rapid antimicrobial resistance analysis. Implements rMAP's core functionality with cloud-native scalability, enhanced QC, & modular workflows. Processes Illumina data through assembly, annotation, AMR detection & phylogenetics. 
 
 ---
 
@@ -8,7 +8,7 @@ nf-rMAP: Nextflow-powered microbial genomics pipeline for rapid antimicrobial re
 
 ---
 
-## A Scalable microbial genomics pipeline for antimicrobial resistance profiling
+## A scalable microbial genomics pipeline for antimicrobial resistance profiling
 
 **nf-rMAP** is a Nextflow implementation of the original rMAP pipeline, offering:
 - Cloud-native microbial genome analysis  
@@ -151,6 +151,69 @@ results/
 └── multiqc_report.html    # Consolidated QC
 ```
 
+# For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases:
+
+### 1. Antimicrobial Resistance (AMR) Databases
+
+| Database   | Purpose                                      | Download Command/URL                   |
+|------------|--------------------------------------------- |----------------------------------------|
+| ResFinder  | Antibiotic resistance genes                  | `abricate --setupdb --db resfinder`    |
+| CARD       | Comprehensive Antibiotic Resistance Database | `abricate --setupdb --db card`         |
+| ARG-ANNOT  | Antibiotic Resistance Gene Annotation        | `abricate --setupdb --db argannot`     |
+| MEGARES    | Antibiotic resistance hierarchy              | `MEGARES` *(manual download required)* |
+| NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
+
+
+### 2. Virulence & Mobile Elements
+
+| Database        | Purpose               | Download Command/URL                      |
+|-----------------|-----------------------|-------------------------------------------|
+| VFDB            | Virulence Factors     | `abricate --setupdb --db vfdb`            |
+| PlasmidFinder   | Plasmid replicons     | `abricate --setupdb --db plasmidfinder`   |
+| ISfinder        | Insertion Sequences   | `ISfinder` *(manual download required)*   |
+
+
+### 3. Taxonomic Classification
+
+| Database  | Purpose               | Installation Command                                          |
+|-----------|-----------------------|---------------------------------------------------------------|
+| GTDB-Tk   | Genome Taxonomy       | `gtdbtk download --data_dir /databases/gtdbtk`                |
+| Kraken2   | Standard Kraken2 DB   | `kraken2-build --standard --db /databases/kraken2` 'bacterial'|
+
+### 4. Annotation Databases
+
+| Database | Purpose                 | Command                                                              |
+|----------|-------------------------|----------------------------------------------------------------------|
+| Prokka   | Prokaryotic Annotation  | Automatically included                                               |
+| EggNOG   | Functional Annotation   | `download_eggnog_data.py -y -f --data_dir /databases/eggnog`         |
+
+# Directory structure recommendation
+
+```bash
+/databases
+├── amr
+│   ├── card
+│   ├── resfinder
+│   └── megares
+├── virulence
+│   ├── vfdb
+│   └── plasmidfinder
+├── references
+│   └── species_name
+├── mlst
+├── kraken2
+└── gtdbtk
+
+```
+
+# Update frequency: run database updates regularly
+
+```bash
+amrfinder --update
+abricate --update --datadir /databases/amr
+mlst --update
+
+```
 
 # Contributing 
 
@@ -159,7 +222,6 @@ results/
 - Fork repository and create feature branch
 - Submit PR with detailed description
 - Follow original rMAP repository here **https://github.com/GunzIvan28/rMAP**
-
 
 
 # Citation 
