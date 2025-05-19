@@ -8,7 +8,7 @@
 
 ---
 
-# A scalable microbial genomics pipeline for antimicrobial resistance profiling
+# A scalable microbial genomics pipeline for comprehensive bacterial chracterization, virulence & antimicrobial resistance profiling
 
 **nf-rMAP** is a Nextflow implementation of the original rMAP pipeline, offering:
 - Cloud-native microbial genome analysis  
@@ -153,7 +153,7 @@ results/
 
 ### For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases.
 
-# 1. Antimicrobial Resistance (AMR) Databases
+### Antimicrobial resistance (AMR) databases
 
 | Database   | Purpose                                      | Download Command/URL                   |
 |------------|--------------------------------------------- |----------------------------------------|
@@ -164,7 +164,7 @@ results/
 | NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
 
 
-# 2. Virulence & Mobile Elements
+### Virulence & Mobile elements
 
 | Database        | Purpose               | Download Command/URL                      |
 |-----------------|-----------------------|-------------------------------------------|
@@ -173,21 +173,21 @@ results/
 | ISfinder        | Insertion Sequences   | `ISfinder` *(manual download required)*   |
 
 
-# 3. Taxonomic Classification
+### Taxonomic classification
 
 | Database  | Purpose               | Installation Command                                          |
 |-----------|-----------------------|---------------------------------------------------------------|
 | GTDB-Tk   | Genome Taxonomy       | `gtdbtk download --data_dir /databases/gtdbtk`                |
 | Kraken2   | Standard Kraken2 DB   | `kraken2-build --standard --db /databases/kraken2` 'bacterial'|
 
-# 4. Annotation Databases
+### Annotation databases
 
 | Database | Purpose                 | Command                                                              |
 |----------|-------------------------|----------------------------------------------------------------------|
 | Prokka   | Prokaryotic Annotation  | Automatically included                                               |
 | EggNOG   | Functional Annotation   | `download_eggnog_data.py -y -f --data_dir /databases/eggnog`         |
 
-# Directory structure recommendation
+### Directory structure recommendation
 
 ```bash
 /databases
@@ -206,7 +206,7 @@ results/
 
 ```
 
-# Update frequency: run database updates regularly
+### Update frequency: run database updates regularly
 
 ```bash
 amrfinder --update
@@ -215,7 +215,7 @@ mlst --update
 
 ```
 
-# Contributing 
+### Contributing 
 
 - We welcome contributions!
 - Open an issue to discuss proposed changes
@@ -224,7 +224,7 @@ mlst --update
 - Follow original rMAP repository here **https://github.com/GunzIvan28/rMAP**
 
 
-# Citation 
+### Citation 
 
 If you use nf-rMAP, please cite: 
 > **Sserwadda, I. & Mboowa, G.** (2021).  
