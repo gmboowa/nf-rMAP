@@ -126,14 +126,14 @@ Parameter	default	description
 
 ```bash
 
---input	      Required	     Input FASTQ path/pattern
---outdir	  results	     Output directory
---reference	  None	         Reference genome (.gbk/.fasta)
---assembly	  megahit	     Assembler: megahit/shovill
---cpus	4	  Total CPUs to  use
---memory	  32.GB	Per-job  memory allocation
---amr	      false	         Enable AMR detection
---phylogeny	  false	         Build phylogenetic trees
+--input	      Required	         Input FASTQ path/pattern
+--outdir	  results	         Output directory
+--reference	  None	             Reference genome (.gbk/.fasta)
+--assembly	  megahit	         Assembler: megahit/shovill
+--cpus	        4	             Total CPUs to  use
+--memory	  32.GB	Per-job      memory allocation
+--amr	          false	         Enable AMR detection
+--phylogeny	      false	         Build phylogenetic trees
 
 **View all parameters with** --help
 
@@ -164,8 +164,13 @@ results/
 | MEGARES    | Antibiotic resistance hierarchy              | `MEGARES` *(manual download required)* |
 | NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
 
-**chmod +x databases_setup_script.sh && ./databases_setup_script.sh**
+```
+**chmod +x databases_setup_script.sh && ./databases_setup_script.sh** |
+
 **chmod +x MLST_schemes.sh && ./MLST_schemes.sh**
+
+```
+
 
 ### Virulence & Mobile elements
 
