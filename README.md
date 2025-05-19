@@ -155,7 +155,7 @@ results/
 ```
 
 ### For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases.
-
+```
 ### Antimicrobial resistance (AMR) databases
 
 | Database   | Purpose                                      | Download Command/URL                   |
