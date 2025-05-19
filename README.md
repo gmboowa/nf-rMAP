@@ -167,9 +167,9 @@ results/
 | NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
 
 ```
-**chmod +x databases_setup_script.sh && ./databases_setup_script.sh** |
+*chmod +x databases_setup_script.sh && ./databases_setup_script.sh*
 
-**chmod +x MLST_schemes.sh && ./MLST_schemes.sh**
+*chmod +x MLST_schemes.sh && ./MLST_schemes.sh*
 
 ```
 
