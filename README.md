@@ -8,7 +8,7 @@
 
 ---
 
-## A scalable microbial genomics pipeline for antimicrobial resistance profiling
+# A scalable microbial genomics pipeline for antimicrobial resistance profiling
 
 **nf-rMAP** is a Nextflow implementation of the original rMAP pipeline, offering:
 - Cloud-native microbial genome analysis  
@@ -153,7 +153,7 @@ results/
 
 # For **nf-rMAP** (Nextflow implementation of rMAP), you'll need to download and configure these essential biological databases:
 
-### 1. Antimicrobial Resistance (AMR) Databases
+## 1. Antimicrobial Resistance (AMR) Databases
 
 | Database   | Purpose                                      | Download Command/URL                   |
 |------------|--------------------------------------------- |----------------------------------------|
@@ -164,7 +164,7 @@ results/
 | NCBI AMR   | NCBI's curated AMR database                  | `amrfinder --update`                   |
 
 
-### 2. Virulence & Mobile Elements
+## 2. Virulence & Mobile Elements
 
 | Database        | Purpose               | Download Command/URL                      |
 |-----------------|-----------------------|-------------------------------------------|
@@ -173,14 +173,14 @@ results/
 | ISfinder        | Insertion Sequences   | `ISfinder` *(manual download required)*   |
 
 
-### 3. Taxonomic Classification
+## 3. Taxonomic Classification
 
 | Database  | Purpose               | Installation Command                                          |
 |-----------|-----------------------|---------------------------------------------------------------|
 | GTDB-Tk   | Genome Taxonomy       | `gtdbtk download --data_dir /databases/gtdbtk`                |
 | Kraken2   | Standard Kraken2 DB   | `kraken2-build --standard --db /databases/kraken2` 'bacterial'|
 
-### 4. Annotation Databases
+## 4. Annotation Databases
 
 | Database | Purpose                 | Command                                                              |
 |----------|-------------------------|----------------------------------------------------------------------|
@@ -226,4 +226,8 @@ mlst --update
 
 # Citation 
 
-If you use nf-rMAP in your research, please cite: Sserwadda I, Mboowa G. rMAP: the Rapid Microbial Analysis Pipeline for ESKAPE bacterial group whole-genome sequence data. Microb Genom. 2021 Jun;7(6):000583. doi: 10.1099/mgen.0.000583. PMID: 34110280; PMCID: PMC8461470.
+If you use nf-rMAP, please cite: 
+> **Sserwadda, I. & Mboowa, G.** (2021).  
+> **rMAP: the Rapid Microbial Analysis Pipeline for ESKAPE bacterial group whole-genome sequence data**.  
+> *Microbial Genomics*, 7(6):000583. https://doi.org/10.1099/mgen.0.000583  
+> PMID: [34110280](https://pubmed.ncbi.nlm.nih.gov/34110280) · PMCID: [PMC8461470](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8461470/)
