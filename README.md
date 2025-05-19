@@ -8,7 +8,7 @@
 
 ---
 
-# A scalable microbial genomics pipeline for comprehensive bacterial chracterization, virulence & antimicrobial resistance profiling
+### A scalable microbial genomics pipeline for comprehensive bacterial chracterization, virulence & antimicrobial resistance profiling
 
 **nf-rMAP** is a Nextflow implementation of the original rMAP pipeline, offering:
 - Cloud-native microbial genome analysis  
@@ -35,7 +35,7 @@ conda env create -f nf-rMAP.yml
 
 ```
 
-# Minimal run
+### Minimal run
 
 ```bash
 
@@ -45,7 +45,7 @@ nextflow run nf-rMAP/main.nf \
     -profile docker
 ```
 
-# Requirements
+### Requirements
 
 ```bash
 
@@ -55,7 +55,7 @@ nextflow run nf-rMAP/main.nf \
 
 ```
 
-# Install Nextflow
+### Install Nextflow
 
 
 ```bash
@@ -65,7 +65,7 @@ sudo mv nextflow /usr/local/bin/
 
 ```
 
-# Set up Docker
+### Set up Docker
 
 ```bash
 sudo apt-get install docker.io
@@ -76,7 +76,7 @@ sudo usermod -aG docker $USER
 
 ```
 
-# Clone repository
+### Clone repository
 
 
 ```bash
@@ -87,7 +87,7 @@ cd nf-rMAP
 
 ```
 
-# Usage 
+### Usage 
 
 
 Basic analysis
@@ -102,7 +102,7 @@ nextflow run main.nf \
     -with-report execution.html
 ```
 
-# Advanced run
+### Advanced run
 
 ```bash
 
@@ -117,7 +117,7 @@ nextflow run main.nf \
     -profile awsbatch \
     -resume
 ```
-# Configuration parameters
+### Configuration parameters
 
 Parameter	default	description
 
@@ -137,7 +137,7 @@ Parameter	default	description
 **View all parameters with** --help
 
 ```
-# Output structure
+### Output structure
 ---
 
 ```bash
